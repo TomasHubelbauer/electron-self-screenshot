@@ -1,0 +1,16 @@
+{
+  "name": "electron-self-screenshot",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "electron index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomasHubelbauer/electron-self-screenshot.git"
+  },
+  "author": "Tomas Hubelbauer",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^2.0.1"
+  }
+}
