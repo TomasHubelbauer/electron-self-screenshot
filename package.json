@@ -2,7 +2,7 @@
   "name": "electron-self-screenshot",
   "version": "1.0.0",
   "scripts": {
-    "start": "electron index.js --inspect"
+    "start": "electron index.js"
   },
   "repository": {
     "type": "git",
@@ -12,5 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "electron": "^2.0.1"
+  },
+  "dependencies": {
+    "window-screenshot": "https://github.com/TomasHubelbauer/window-screenshot"
   }
 }
