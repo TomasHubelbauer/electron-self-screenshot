@@ -11,9 +11,6 @@
   "author": "Tomas Hubelbauer",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^2.0.1"
-  },
-  "dependencies": {
-    "window-screenshot": "https://github.com/TomasHubelbauer/window-screenshot"
+    "electron": "^5.0.1"
   }
 }

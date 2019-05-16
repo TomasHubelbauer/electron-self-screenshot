@@ -1,24 +1,10 @@
 const { app, BrowserWindow } = require('electron');
 const fs = require('fs');
-const screenshot = require('window-screenshot');
 
-app.on('ready', launchInfo => {
+app.on('ready', () => {
   const window = new BrowserWindow({ width: 800, height: 600 });
-  // https://github.com/electron/electron/issues/1602
-  window.webContents.loadURL('http://hubelbauer.net/');
-  setTimeout(() => {
-    // window.capturePage(image => {
-    //   const dataUrl = image.toDataURL();
-    //   window.webContents.loadURL(dataUrl);
-    // });
-    screenshot(
-      0, // 0 is for active window
-      function (err, res) {
-        if (err) throw err;
-
-        fs.writeFile("result.png", res);
-      });
-  }, 5000);
+  window.webContents.loadURL('http://google.com/');
+  window.webContents.addListener('dom-ready', () => window.capturePage(image => fs.writeFileSync('screenshot.png', image.toPNG())));
 });
 
 // Or from the renderer process in index.js/DevTools:
